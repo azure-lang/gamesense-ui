@@ -2405,7 +2405,7 @@ local Passed, Statement = pcall(function()
 	playeresp:CreateToggle({Name = "Money", State = false})
 	playeresp:CreateToggle({Name = "Skeleton", State = false})
 	playeresp:CreateToggle({Name = "Out of FOV arrow", State = true})
-	playeresp:CreateSlider({State = 12, Max = 30, Min = 1, Decimals = 1, Suffix = "px"})
+	playeresp:CreateSlider({State = 12, Max = 30, Min = 1, Decimals = 1, Suffix = "px", Callback = function(Value) game.Players.LocalPlayer.Humanoid.WalkSpeed = Value})
 	playeresp:CreateSlider({State = 100, Max = 100, Min = 1, Decimals = 1, Suffix = "%"})
 	--
 	coloredmodels:CreateToggle({Name = "Player", State = false})
